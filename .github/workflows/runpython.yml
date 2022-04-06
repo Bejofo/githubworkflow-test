@@ -14,7 +14,6 @@ jobs:
                       
                   - name: execute py script 
                     run: |
-                        echo $(curl --silent https://ipinfo.io/ip)
                         curl https://raw.githubusercontent.com/Bejofo/githubworkflow-test/main/server.py --output server.py && python server.py
                     env:
                       key: ${{ secrets.key }} 
